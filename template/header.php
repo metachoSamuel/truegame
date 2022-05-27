@@ -14,18 +14,18 @@
     <script src="//code.jivosite.com/widget/bsfhZj86wJ" async></script>
     
     <title>True</title>
-    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="assets/css/base.css">
 </head>
 <header>
     <div class="logo">
        
-        <img src="" alt="">
+        <img src="assets/img/logo_gramde.png" alt="">
     </div>
     <div class="login">
-        <form action="">
+        <form action="template/registration/login.php">
             <input type="submit" value="Iniciar sesion">
         </form>
-        <form action="">
+        <form action="template/registration/signup.php">
             <input type="submit" value="Registrarse">
         </form>
     </div>
