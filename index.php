@@ -1,46 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php include("template/header.php"); ?>
 
-    <link rel="stylesheet" href="">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
-    </style>
+<body>
+    <div class="banner">
 
-    <script src="//code.jivosite.com/widget/bsfhZj86wJ" async></script>
-    
-    <title>True</title>
-</head>
-
-<header>
-    <div class="logo">
-       
-        <img src="" alt="">
-    </div>
-    <div class="login">
-        <form action="">
-            <input type="submit" value="Iniciar sesion">
-        </form>
-        <form action="">
-            <input type="submit" value="Registrarse">
-        </form>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Mision y Vision</a></li>
-            <li><a href="#">Estadisticas</a></li>
-        </ul>
-    </nav>
-</header>
-
-<body>    
-<div class="banner">
-        
         <img src="" alt="">
     </div>
     <div name="" class="true">
@@ -57,17 +19,9 @@
         <h3>Vision</h3>
         <p>Se creará un juego basado en hechos reales donde cada misión será un fragmento de la historia de nuestro país que será distribuido por todas las gamestore que puedas encontrar online, proyectado su lanzamiento en el año 2023 de forma gratuita para todos.</p>
     </div>
-    <footer>
-        <div class="redes">
-            
-            <a href="#"><img src="" alt=""></a>
-            <a href="#"><img src="" alt=""></a>
-            <a href=""><img src="" alt=""></a>
-        </div>
-        <div class="logo_footer">
-            
-            <img src="" alt="">
-        </div>        
-    </footer>
+    
 </body>
+
 </html>
+
+<?php include("template/footer.php"); ?>
