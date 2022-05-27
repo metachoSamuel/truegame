@@ -7,7 +7,24 @@
     <title>Admin site</title>
 </head>
 <body>
-    
+    <div class="">
+        <h2>Pagina administracion </h2>
+    </div>
+    <form action="" method="POST">
+    <div class="login-admin">
+        <div class="">
+            <label for="">Usuario</label>
+            <input type="text" name="user">
+        </div>
+        <div class="">
+            <label for="">Password</label>
+            <input type="password"   >
+
+        </div>
+        <button type="submit"> Entrar </button>
+
+    </div>
+    </form>
     login
 
 </body>
