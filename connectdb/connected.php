@@ -38,7 +38,7 @@ if(mysqli_num_rows($namecheck)>0){
     echo "Coronamos";
 }
 
-mysqli_close($db_connection);
+mysqli_close($db_connection);   
 
 
 ?>
