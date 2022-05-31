@@ -4,7 +4,7 @@ require 'database.php';
 $message = '';
 
 if (!empty($_POST['nombre']) && !empty($_POST['apellido'])&& !empty($_POST['email']) && !empty($_POST['username'])&& !empty($_POST['password'])) {
-    $sql = "INSERT INTO  user (nombre, apellido, email, username, password) VALUES (:nombre, :apellido, :email, :username, :password)";
+    $sql = "INSERT INTO  users (nombre, apellido, email, username, password) VALUES (:nombre, :apellido, :email, :username, :password)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':nombre',$_POST['nombre']);
     $stmt->bindParam(':apellido',$_POST['apellido']);
@@ -47,10 +47,15 @@ if (!empty($_POST['nombre']) && !empty($_POST['apellido'])&& !empty($_POST['emai
         <?php endif; ?>
         <form action="" method="POST">
             <input type="text" name="nombre" placeholder="nombres">
+            <div style="padding: 2%;"></div>
             <input type="text" name="apellido" placeholder="apellidos">
+            <div style="padding: 2%;"></div>
             <input type="text" name="email" placeholder="email">
+            <div style="padding: 2%;"></div>
             <input type="text" name="username" placeholder="nombre de usuario">
+            <div style="padding: 2%;"></div>
             <input type="password" name="password" placeholder="contraseña">
+            <div style="padding: 2%;"></div>
             <input type="submit" value="Registrar" class="boton">
         </form>
     </div>
