@@ -1,9 +1,51 @@
-<?php include("template/header.php"); ?>
+<?php
+session_start();
 
-<body>
+require 'database.php';
+
+if (isset($_SESSION['user_id'])) {
+    $records = $conn->prepare('SELECT * FROM users WHERE id_usuario = :id_usuario');
+    $records->bindParam(':id_usuario', $_SESSION['user_id']);
+    $records->execute();
+    $results = $records->fetch(PDO::FETCH_ASSOC);
+
+    $user = null;
+
+    if (count($results) > 0) {
+        $user = $results;
+    }
+}
+?>
+<?php require "partials/header.php" ?>
+
+<?php if (!empty($user)) : ?>
+    <br> Welcome. <?= $user['email']; ?>
+    <br>You are Successfully Logged In
+    <a href="logout.php">
+        Logout
+    </a>
+<?php else : ?>
+    <nav>
+        <ul>
+            <li><a href="/truegame">Inicio</a></li>
+            <li><a href="#">Mision y Vision</a></li>
+            <li><a href="#">Estadisticas</a></li>
+        </ul>
+    </nav>
+
+    <body>
+
+    </body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+    </style>
+
+
+
     <div class="banner">
-
-        <img src="" alt="">
+        <img src="assets/img/banner.png" alt="">
     </div>
     <div name="" class="true">
         <h3>¿Que es True?</h3>
@@ -19,9 +61,18 @@
         <h3>Vision</h3>
         <p>Se creará un juego basado en hechos reales donde cada misión será un fragmento de la historia de nuestro país que será distribuido por todas las gamestore que puedas encontrar online, proyectado su lanzamiento en el año 2023 de forma gratuita para todos.</p>
     </div>
-    
-</body>
+
+<?php endif; ?>
+<footer>
+    <div class="redes">
+        {% load static %}
+        <a href="#"><img src="assets/img/facebook.png" alt=""></a>
+        <a href="#"><img src="assets/img/instagram.png" alt=""></a>
+        <a href=""><img src="assets/img/twitter.png" alt=""></a>
+    </div>
+    <div class="logo_footer">
+        <img src="assets/img/logo.png" alt="">
+    </div>
+</footer>
 
 </html>
-
-<?php include("template/footer.php"); ?>
