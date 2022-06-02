@@ -19,7 +19,7 @@ if (isset($_SESSION['user_id'])) {
 <?php require "partials/header.php" ?>
 
 <?php if (!empty($user)) : ?>
-    <?php require 'userdetail.php' ?>
+    <?php require 'partials/userdetail.php' ?>
 <?php else : ?>
     <nav>
         <ul>
