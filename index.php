@@ -65,7 +65,6 @@ if (isset($_SESSION['user_id'])) {
 <?php endif; ?>
 <footer>
     <div class="redes">
-        {% load static %}
         <a href="#"><img src="assets/img/facebook.png" alt=""></a>
         <a href="#"><img src="assets/img/instagram.png" alt=""></a>
         <a href=""><img src="assets/img/twitter.png" alt=""></a>
