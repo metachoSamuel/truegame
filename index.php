@@ -19,11 +19,7 @@ if (isset($_SESSION['user_id'])) {
 <?php require "partials/header.php" ?>
 
 <?php if (!empty($user)) : ?>
-    <br> Welcome. <?= $user['email']; ?>
-    <br>You are Successfully Logged In
-    <a href="logout.php">
-        Logout
-    </a>
+    <?php require 'partials/userdetail.php' ?>
 <?php else : ?>
     <nav>
         <ul>
@@ -65,7 +61,6 @@ if (isset($_SESSION['user_id'])) {
 <?php endif; ?>
 <footer>
     <div class="redes">
-        {% load static %}
         <a href="#"><img src="assets/img/facebook.png" alt=""></a>
         <a href="#"><img src="assets/img/instagram.png" alt=""></a>
         <a href=""><img src="assets/img/twitter.png" alt=""></a>
